@@ -6,15 +6,19 @@ using System.Web;
 
 namespace Finanzas.Models
 {
-    public class Credito
+    public class Misdatos
     {
-        public string Id { get; set; }
-        public string UserId { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
+
         [DataType(DataType.Date)]
         public DateTime Fecha { get; set; }
         public string Detalle { get; set; }
         public float Monto { get; set; }
         public int Plazo { get; set; }
+
  
     }
 }
