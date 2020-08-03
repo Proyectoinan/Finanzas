@@ -1,33 +1,142 @@
 ﻿<br />
 @{
     ViewBag.Title = "Esta pagina esta orientada a que las personas puedan lograr un equilibrio entre la teoria y la practica en el tema de las finanzas personales";
+    ViewBag.Title2 = "Ingreso deudas";
 }
 
 <center>
     <h2>@ViewBag.Title.</h2>
+    <br>
+    <br>
+    <br>
 </center>
-<br />
-<div class="row">
+<div class="container">
     <div class="col-md-4">
-        <h2>¿Como lograrlo?</h2>
-        <p>
-            * Conocete a ti mismo<br /><br />
-            * Ahorra regularmente cuánto antes mejor<br /><br />
-            * Valora el dinero<br /><br />
-            * Enseña a tus hijos cuanto cuenta ganar dinero<br /><br />
-            * No malgastes el dinero<br /><br />
-            * Controla tus tarjetas de creditoo
-        </p>
-        <div />
-    </div>
-    </div>
-        <div class="row">
-            <div class="col-md-4">
-                <h2>Un video te puede ayudar</h2>
-                <p>
-                    <video src="~/Content/6 Pasos para organizar y mejorar tus finanzas personales.mp4" controls autoplay height="300"  > <</video>
-                </p>
-                <p><a class="btn btn-default" href="https://www.creditoreal.com.mx/educacionfinanciera/la-importancia-de-planear-tus-finanzas-personales">Leer más &raquo;</a></p>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Ingrese su Nombre</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre">
+                <small id="emailHelp" class="form-text text-muted">Use sus datos personales con precaucion.</small>
             </div>
+            <div class="form-group">
+                <label for="apellido">Ingrese su apellido</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Apellido">
+
+            </div>
+        </form>
+    </div>
+
+
+
+    <form>
+
+        <div class="col-md-4">
+            <label for="telefono">Ingrese su telefono</label>
+            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefono">
+            <small id="emailHelp" class="form-text text-muted">Use sus datos personales con precaucion.</small>
+
+            <div class="form-group">
+                <label for="direccion">Ingrese su direccion</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Direccion">
+            </div>
+
         </div>
+    </form>
     
+   
+        
+    
+</div>
+
+   @Html.Partial("_DatosUsuario") 
+    
+    
+    
+    
+
+
+
+
+
+
+<center>
+    <br>
+    <br>
+    <br>
+    <h3>@ViewBag.Title2.</h3>
+    <br>
+</center>
+<div class="container">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="deuda">Motivo de deuda</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Motivo">
+                <small id="emailHelp" class="form-text text-muted">Deuda.</small>
+            </div>
+            <div class="form-group">
+                <label for="timepo">Tiempo diferido</label>
+                <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Tiempo en Meses">
+
+            </div>
+        </form>
+    </div>
+
+
+
+    <form>
+
+        <div class="col-md-4">
+            <label for="deuda">Deuda total</label>
+            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Deuda total">
+            <small id="emailHelp" class="form-text text-muted">Deuda.</small>
+
+            <div class="form-group">
+                <label for="pago">Ingrese la catidad cancelada hasta la fecha </label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su pago realizado">
+                <small id="emailHelp" class="form-text text-muted">su pego sera restado del seleccionado.</small>
+            </div>
+
+        </div>
+    </form>
+
+
+    <form>
+        <div class="col-md-4">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Direccion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>Thornton</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>Thornton</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>Thornton</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </form>
+    
+</div>
+<button class="btn btn-primary" type="submit">Agregar</button>
+

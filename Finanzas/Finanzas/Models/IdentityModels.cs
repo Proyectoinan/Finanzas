@@ -29,5 +29,7 @@ namespace Finanzas.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Finanzas.Models.Credito> Creditoes { get; set; }
     }
 }

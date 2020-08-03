@@ -196,15 +196,30 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CreditosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007280032091_init.cs" />
+    <Compile Include="Migrations\202007280032091_init.Designer.cs">
+      <DependentUpon>202007280032091_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007280307276_UdateCredito.cs" />
+    <Compile Include="Migrations\202007280307276_UdateCredito.Designer.cs">
+      <DependentUpon>202007280307276_UdateCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007280315253_creditosCampos.cs" />
+    <Compile Include="Migrations\202007280315253_creditosCampos.Designer.cs">
+      <DependentUpon>202007280315253_creditosCampos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Credito.cs" />
+    <Compile Include="Models\DatosPersonales.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\prestamos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -272,6 +287,11 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\calculo.cshtml" />
+    <Content Include="Views\Creditos\Create.cshtml" />
+    <Content Include="Views\Creditos\Delete.cshtml" />
+    <Content Include="Views\Creditos\Details.cshtml" />
+    <Content Include="Views\Creditos\Edit.cshtml" />
+    <Content Include="Views\Creditos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -283,6 +303,17 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202007280032091_init.resx">
+      <DependentUpon>202007280032091_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007280307276_UdateCredito.resx">
+      <DependentUpon>202007280307276_UdateCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007280315253_creditosCampos.resx">
+      <DependentUpon>202007280315253_creditosCampos.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
